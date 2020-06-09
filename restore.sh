@@ -31,4 +31,4 @@ done
 if [ -z "${var_inputfile}" ]; then print_usage; fi
 
 # decrypt and print to STDOUT
-openssl enc -d -aes256 -in ${var_inputfile} | ${tool_jq}
+gpg --decrypt "${var_inputfile}"
