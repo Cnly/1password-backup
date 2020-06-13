@@ -70,9 +70,11 @@ fi
 
 # get all items from 1Password
 output=""
+curr=0
 for item in $items
 do
-    echo "  - Getting item ${item}"
+    ((curr+=1))
+    echo "  - Getting item ${item} (${curr}/${nitems})"
 
     retries=10
     has_retried=
